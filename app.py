@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import time
 
-# ---------------- PAGE CONFIG ---------------- #
+# -- PAGE CONFIG. -- #
 
 st.set_page_config(
     page_title="Veridict",
@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# ---------------- SESSION STATE ---------------- #
+# .. SESSION STATE .. #
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -19,7 +19,7 @@ if "messages" not in st.session_state:
 if "mode" not in st.session_state:
     st.session_state.mode = None
 
-# ---------------- CUSTOM CSS ---------------- #
+# .. CSS styling .. #
 
 st.markdown("""
 <style>
@@ -208,7 +208,7 @@ header {visibility:hidden;}
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- LANDING PAGE ---------------- #
+# ... MAIN PAGE ... #
 
 if st.session_state.mode is None:
 
@@ -256,7 +256,7 @@ if st.session_state.mode is None:
 
         st.button("AI vs AI Coming Soon")
 
-# ---------------- HUMAN VS AI ---------------- #
+# mode 1 HUMAN VS AI  #
 
 elif st.session_state.mode == "human":
 
