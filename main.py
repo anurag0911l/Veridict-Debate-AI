@@ -6,19 +6,19 @@ from openai import OpenAI
 
 app = FastAPI()
 
-# ---------------- GROQ CLIENT ---------------- #
+# ... BACK AREA ... #
 
 client = OpenAI(
     api_key="API_KEY_HERE",
     base_url="https://api.groq.com/openai/v1"
 )
 
-# ---------------- REQUEST MODEL ---------------- #
+# .... ENGINE MODEL ... #
 
 class ChatRequest(BaseModel):
     messages: list[dict]
 
-# ---------------- CHAT ENDPOINT ---------------- #
+# ... CHAT ENDPOINT ... #
 
 @app.post("/chat")
 def chat(request: ChatRequest):
